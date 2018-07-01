@@ -15,12 +15,12 @@
 #
 
 # Board device path
-DEVICE_PATH := device/xiaomi/whyred
+DEVICE_PATH := device/xiaomi/jason
 
 BOARD_VENDOR := xiaomi
 
-TARGET_BOOTLOADER_BOARD_NAME := sdm636
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno509
+TARGET_BOOTLOADER_BOARD_NAME := sdm660
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno512
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := sdm660
 
@@ -41,33 +41,31 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 BOARD_USES_QCOM_HARDWARE := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3 androidboot.selinux=permissive
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
-BOARD_KERNEL_TAGS_OFFSET := 0x00000100
-BOARD_RAMDISK_OFFSET     := 0x01000000
+BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
+BOARD_RAMDISK_OFFSET     := 0x02000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
-TARGET_KERNEL_CONFIG := whyred-perf_defconfig
+TARGET_KERNEL_CONFIG := jason-perf_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_PREBUILT_KERNEL := device/xiaomi/jason/Image.gz-dtb
 
 
 # Partitions
 BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
-BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
-BOARD_VENDORIMAGE_PARTITION_SIZE := 2147483648
+BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
+BOARD_CACHEIMAGE_PARTITION_SIZE := 0x10000000
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x04000000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x140000000
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 55155080192
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 0xCD77F7E00
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_USES_VENDORIMAGE := true
-TARGET_COPY_OUT_VENDOR := vendor
 
 #Exfat
 TARGET_EXFAT_DRIVER := sdfat
@@ -171,8 +169,8 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := libinit_whyred
-TARGET_RECOVERY_DEVICE_MODULES := libinit_whyred
+TARGET_INIT_VENDOR_LIB := libinit_jason
+TARGET_RECOVERY_DEVICE_MODULES := libinit_jason
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
@@ -252,4 +250,4 @@ TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
 # Inherit from proprietary files
-include vendor/xiaomi/whyred/BoardConfigVendor.mk
+include vendor/xiaomi/jason/BoardConfigVendor.mk
