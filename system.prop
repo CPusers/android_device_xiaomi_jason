@@ -13,10 +13,9 @@ persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 
-#
-# Set network mode to (T/L/G/W/1X/EVDO, T/G/W/L) for 7+5 mode device on DSDS mode
-#
-ro.telephony.default_network=22,20
+# Set network mode to (T/L/G/W/1X/EVDO, T/G/W/L/1X/EVDO) for 7+7 mode device on DSDS mode
+ro.telephony.default_network=22,22
+ro.telephony.default_cdma_sub=0
 
 debug.sf.enable_hwc_vds=1
 debug.sf.hw=1
@@ -25,6 +24,7 @@ debug.gralloc.enable_fb_ubwc=1
 dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
+debug.sf.recomputecrop=0
 
 #ro.hdmi.enable=true
 #
@@ -184,28 +184,36 @@ persist.camera.hist.drc=1.2
 persist.camera.linkpreview=0
 persist.camera.isp.turbo=1
 
+#For camera
+#enable dual cam low power mode
+persist.dualcam.lpm.enable=1
+#sat enable default
+persist.camera.sat.enable=1
+#defer cmd disable,
+#preview speed optimized
+#Re-enable defer mode,
+#since multiframe component set to master priority mode already
+persist.dualcam.defer.enable=1
+#enable aggressive aec
+persist.camera.instant.aec=1
+#big enough ae bound
+persist.camera.ae.instant.bound=20
+#set antibanding auto to 50Hz auto,
+#then 50Hz power country is priority
+persist.camera.set.afd=4
+#DXO branch enable DXO
+persist.camera.dxo=1
+#DXO enable cac
+persist.camera.feature.cac=1
+#DXO enable fovc for the video mode
+persist.camera.fovc.enable=1
+
 #EIS
 persist.camera.eis.enable=1
 
 #exif info for camera
 persist.sys.exif.make=Xiaomi
-persist.sys.exif.model=Redmi Note 5
-
-#properties for camera front flash lux
-persist.flash.low.lux=390
-persist.flash.light.lux=340
-
-persist.imx376_ofilm.low.lux=310
-persist.imx376_ofilm.light.lux=280
-
-persist.imx376_sunny.low.lux=310
-persist.imx376_sunny.light.lux=280
-
-persist.ov13855_sunny.low.lux=385
-persist.ov13855_sunny.light.lux=370
-
-persist.s5k3l8_ofilm.low.lux=379
-persist.s5k3l8_ofilm.light.lux=367
+persist.sys.exif.model=Mi Note 3
 
 # Create zram disk
 #ro.vendor.qti.config.zram=true
