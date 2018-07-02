@@ -49,9 +49,6 @@ vendor/lib/libadm.so
 vendor/lib/libaudcal.so
 vendor/lib/libqtigef.so
 
-#Speaker firmware
-vendor/firmware/tas2557_uCDSP.bin
-
 # Bluetooth
 vendor/bin/btnvtool
 vendor/bin/wcnss_filter
@@ -65,7 +62,6 @@ vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 bin/mm-qcamera-daemon
 vendor/lib/hw/camera.sdm660.so:vendor/lib/hw/camera.sdm660.so
 lib/libMiCameraHal.so
-lib/libmicamera.ic.so
 vendor/lib/libmmcamera_interface.so:vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmjpeg_interface.so:vendor/lib/libmmjpeg_interface.so
 lib/libmorpho_groupshot.so
@@ -73,7 +69,6 @@ lib/libmorpho_memory_allocator.so
 lib/libmorpho_panorama.so
 vendor/lib/libqomx_core.so:vendor/lib/libqomx_core.so
 lib/sensors.hal.tof.so
-vendor/lib/lib_hdr_dxo.so
 vendor/lib/lib_lowlight_dxo.so
 vendor/lib/lib_lowlight.so
 vendor/lib/libarcsoft_beauty_shot.so
@@ -81,7 +76,6 @@ vendor/lib/libarcsoft_beautyshot.so
 vendor/lib/libarcsoft_dualcam_optical_zoom_control.so
 vendor/lib/libarcsoft_dualcam_optical_zoom.so
 vendor/lib/libarcsoft_dualcam_refocus.so
-vendor/lib/libcaffe.so
 vendor/lib/libcdsprpc.so
 vendor/lib/libchromaflash.so
 vendor/lib/libedge_smooth_hvx_stub.so
@@ -92,7 +86,6 @@ vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmmcamera_arcrtb_lib.so
 vendor/lib/libmmcamera_arcsoft_smoothtranstion_wrapper_lib.so
-vendor/lib/libmmcamera_cac3_lib.so
 vendor/lib/libmmcamera_chromaflash_lib.so
 vendor/lib/libmmcamera_dbg.so
 vendor/lib/libmmcamera_dummyalgo.so
@@ -107,7 +100,6 @@ vendor/lib/libmmcamera_hdr_gb_lib.so
 vendor/lib/libmmcamera_hvx_add_constant.so
 vendor/lib/libmmcamera_hvx_grid_sum.so
 vendor/lib/libmmcamera_imglib_faceproc_adspstub.so
-vendor/lib/libmmcamera_imglib_faceproc_adspstub2.so
 vendor/lib/libmmcamera_imglib.so
 vendor/lib/libmmcamera_jason_imx386_ofilm_eeprom.so
 vendor/lib/libmmcamera_jason_imx386_ofilm.so
@@ -128,7 +120,6 @@ vendor/lib/libmmcamera_ppbase_module.so
 vendor/lib/libmmcamera_ppeiscore.so
 vendor/lib/libmmcamera_quadracfa.so
 vendor/lib/libmmcamera_sac_lib.so
-vendor/lib/libmmcamera_sat_dummy_lib.so
 vendor/lib/libmmcamera_stillmore_lib.so
 vendor/lib/libmmcamera_sw2d_lib.so
 vendor/lib/libmmcamera_thread_services.so
@@ -157,9 +148,7 @@ vendor/lib/libmmjpeg.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libmmqjpegdma.so
 vendor/lib/libmorpho_easy_hdr.so
-vendor/lib/libmorpho_group_portrait.so
 vendor/lib/libmorpho_hdr_checker.so
-vendor/lib/libmorpho_panorama_gp.so
 vendor/lib/libmorpho_video_refiner.so
 vendor/lib/libmpbase.so
 vendor/lib/libois_jason_bu63169_ofilm.so
@@ -631,7 +620,6 @@ vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-utils.so
 vendor/lib/libqti-iopd-client.so
-vendor/lib/libqti-iopd.so
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
@@ -1056,7 +1044,6 @@ vendor/firmware/cpp_firmware_v1_5_1.fw
 vendor/firmware/dbmd4_va_fw.bin
 vendor/firmware/leia_pfp_470.fw
 vendor/firmware/leia_pm4_470.fw
-vendor/firmware/tfa98xx.cnt
 vendor/firmware/voice_amodel.bin
 vendor/framework/com.fingerprints.extension.jar
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so
@@ -1071,7 +1058,6 @@ vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib/hw/com.qualcomm.qti.bluetooth_audio@1.0-impl.so
 vendor/lib/hw/fingerprint.goodix.so
-vendor/lib64/hw/fingerprint.default.so
 vendor/lib/hw/thermal.sdm660.so
 vendor/lib/lib-dplmedia.so
 vendor/lib/lib-imscmservice.so
@@ -1092,7 +1078,6 @@ vendor/lib/libFlacSwDec.so
 vendor/lib/libGPreqcancel.so
 vendor/lib/libGPreqcancel_svc.so
 vendor/lib/libI420colorconvert.so
-vendor/lib/libMiWatermark.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAlacDec.so
 vendor/lib/libOmxAlacDecSw.so
@@ -1127,7 +1112,6 @@ vendor/lib/libcneoplookup.so
 vendor/lib/libconfigdb.so
 vendor/lib/libcppf.so
 vendor/lib/libdataitems.so
-vendor/lib/libdepthmapwrapper.so
 vendor/lib/libdiagjni.so
 vendor/lib/libdisp-aba.so
 vendor/lib/libdpmqmihal.so
@@ -1147,7 +1131,6 @@ vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
 vendor/lib/libgdtap.so
 vendor/lib/libgeofence.so
-vendor/lib/libhal_dbg.so
 vendor/lib/libhbtpclient.so
 vendor/lib/libhbtpdsp.so
 vendor/lib/libhbtpfrmwk.so
@@ -1170,15 +1153,11 @@ vendor/lib/liblowi_wifihal.so
 vendor/lib/liblqe.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libmfido.so
-vendor/lib/libmicamera.ic.so
 vendor/lib/libmlipay.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libmm-disp-apis.so
 vendor/lib/libmm-hdcpmgr.so
 vendor/lib/libmm-qdcm.so
-vendor/lib/libmmcamera_arcsoftbokeh_lib.so
-vendor/lib/libmmcamera_bokeh.so
-vendor/lib/libmmcamera_depth_map.so
 vendor/lib/libmmosal_proprietary.so
 vendor/lib/libmmsw_detail_enhancement.so
 vendor/lib/libmmsw_math.so
@@ -1243,7 +1222,6 @@ vendor/lib/libtzdrmgenprov.so
 vendor/lib/libulp2.so
 vendor/lib/libvideobokeh.so
 vendor/lib/libvideoutils.so
-vendor/lib/libvidhance_gyro.so
 vendor/lib/libvpptestutils.so
 vendor/lib/libwfdcommonutils_proprietary.so
 vendor/lib/libwfdhaldsmanager.so
@@ -1341,8 +1319,6 @@ vendor/lib64/libmmcamera_faceproc.so
 vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmmcamera_tintless_algo.so
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
-vendor/lib64/libmmi.so
-vendor/lib64/libmmi_jni.so
 vendor/lib64/libmmosal_proprietary.so
 vendor/lib64/libmmsw_detail_enhancement.so
 vendor/lib64/libmmsw_math.so
@@ -1546,13 +1522,9 @@ etc/camera/jason_s5k3p8sp_sunny_chromatix.xml
 
 # Xiaomi camera libs
 vendor/lib/libdualcameraddm.so
-vendor/lib/libarcsoft_high_dynamic_range.so
 vendor/lib/libXMFD_AgeGender.so
 vendor/lib/libcdsprpc.so
-vendor/lib/libarcsoft_beautyshot_exin.so
-vendor/lib/libvidhance.so
 vendor/lib/libmmlib2d_interface.so
-vendor/lib/libmorphohht4.0.so
 
 # Consumerir
 vendor/lib64/hw/consumerir.default.so
